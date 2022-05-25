@@ -6,22 +6,16 @@
 
 [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Responsive%20images,%20now%20easier%20than%20ever&url=https://scaleflex.github.io/ng-cloudimage-responsive/&via=cloudimage&hashtags=react,images,cloudimage,responsive_images,lazy_loading,web_acceleration,image_optimization,image_CDN,image_CDNwebp,jpeg_xr,jpg_optimization,image_resizing_and_CDN,angular)
 
-<p align="center">
-	<img
-		height="175"
-		alt="The Lounge"
-		src="https://demo.cloudimg.io/height/350/n/https://scaleflex.airstore.io/filerobot/filerobot-cloudimage.png?sanitize=true">
-</p>
 
 <h1 align="center">
-   Angular Cloudimage Responsive
+   Angular EdgePic Responsive
 </h1>
 
 <p align="center">
 	<strong>
 		<a href="#table_of_contents">Docs</a>
 		•
-		<a href="https://scaleflex.github.io/ng-cloudimage-responsive/" target="_blank">Demo</a>
+		<a href="https://fasterize.github.io/ng-edgepic-responsive/" target="_blank">Demo</a>
 		•
 		<a href="https://codesandbox.io/s/ng-cloudimage-responsive-example-dy74h2?file=/src/app/app.module.ts" target="_blank">Code Sandbox</a>
 		•
@@ -31,28 +25,21 @@
 
 This plugin detects the width of any image container as well as the device pixel ratio
 density to load the optimal image size needed.
-Images are resized on-the-fly via the <a href="https://cloudimage.io" target="_blank">Cloudimage service</a>, thus offering a comprehensive
+Images are resized on-the-fly via the <a href="https://edgepic.io" target="_blank">EdgePic service</a>, thus offering a comprehensive
 automated image optimization service.
 
 When an image is first loaded on your website or mobile app,
-Cloudimage's resizing servers will download the origin image from
-the source, resize it for the client's screen size and deliver to your users through one or multiple
+EdgePic's resizing servers will download the origin image from
+the source, resize it for the client's screen size and deliver to your users through Fasterize
 Content Delivery Networks (CDNs). The generated image formats are cached in the CDN and will be delivered rocket fast on any subsequent request.
 
 **NOTE:** Your original (master) images should be stored on a server
 or storage bucket (S3, Google Cloud, Azure Blob...) reachable over
-HTTP or HTTPS by Cloudimage. If you want to upload your master images to
-Cloudimage, contact us at
-[hello@cloudimage.io](mailto:hello@cloudimage.io).
+HTTP or HTTPS by EdgePic. If you want to upload your master images to
+EdgePic, please contact us at
+[hello@edgepic.io](mailto:hello@edgepic.io).
 
-<p align="center">
-	<img
-		alt="The Lounge"
-		src="https://demo.cloudimg.io/width/1400/n/https://scaleflex.airstore.io/filerobot/cloudimage-process.jpg?sanitize=true">
-</p>
-
-powered by [Cloudimage](https://www.cloudimage.io/)
-([Watch the video here](https://www.youtube.com/watch?time_continue=2&v=JFZSE1vYb0k))
+powered by [EdgePic](https://edgepic.io/)
 
 ## Table of contents
 
@@ -65,28 +52,25 @@ powered by [Cloudimage](https://www.cloudimage.io/)
 * [Image properties](#image_properties)
 * [Lazy loading](#lazy_loading)
 * [Browser support](#browser_support)
-* [Filerobot UI Family](#ui_family)
 * [Contributing](#contributing)
 * [License](#license)
 
 
 ## <a name="demo"></a> Demo
 
-To see the Cloudimage Responsive plugin in action, please check out the
+To see the EdgePic Responsive plugin in action, please check out the
 [Demo page](https://scaleflex.github.io/ng-cloudimage-responsive/).
 Play with your browser's window size and observe your
-Inspector's Network tab to see how Cloudimage delivers the optimal
+Inspector's Network tab to see how EdgePic delivers the optimal
 image size to your browser, hence accelerating the overall page
 loading time.
 
 ## <a name="requirements"/> Requirements
 
-To use the Cloudimage Responsive plugin, you will need a
-Cloudimage token to deliver your images over CDN. Don't worry, it only takes seconds to get one by
-registering [here](https://www.cloudimage.io/en/register_page).
+To use the EdgePic Responsive plugin, you will need an
+EdgePic token to deliver your images over CDN. Don't worry, it only takes seconds to get one by
+contacting Fasterize Support [here](https://support.fasterize.com).
 Once your token is created, you can configure it as described below.
-This token allows you to use 25GB of image cache and 25GB of worldwide
-CDN traffic per month for free.
 
 ## <a name="installation"></a>Step 1: Installation
 
@@ -109,7 +93,7 @@ import { AppComponent } from './app.component';
 
 const ciConfig = {
   token: 'demo',
-  baseUrl: 'https://jolipage.airstore.io/'
+  baseUrl: 'https://www.fasterize.com/'
 };
 
 @NgModule({
@@ -142,10 +126,9 @@ the image position while image is loading.
 
 ###### Type: **String** | Default: **"demo"** | _required_
 
-Your Cloudimage customer token.
-[Subscribe](https://www.cloudimage.io/en/register_page) for a
-Cloudimage account to get one. The subscription takes less than a
-minute and is totally free.
+Your EdgePic customer token.
+[Ask Fasterize Support](https://support.fasterize.com/) for a
+EdgePic account to get one.
 
 ### baseUrl
 
@@ -177,7 +160,7 @@ Applies a nice interlacing effect for preview transition
 
 ###### Type: **String** | Default: **'foil1'** | _optional_
 
-Applies default Cloudimage filters to your image, e.g. fcontrast, fpixelate, fgaussian, backtransparent,
+Applies default EdgePic filters to your image, e.g. fcontrast, fpixelate, fgaussian, backtransparent,
 rotation...  Multiple filters can be applied, separated by "```.```" (dot).
 
 [Full documentation here.](https://docs.cloudimage.io/go/cloudimage-documentation/en/filters/)
@@ -224,7 +207,7 @@ relative to baseUrl in your config.
 **NOTES:**
 
 The plugin uses a special algorithm to detect the width of image container and set the image size accordingly.
-This is the recommended way of using the Cloudimage Responsive plugin.
+This is the recommended way of using the EdgePic Responsive plugin.
 
 ### operation (or o)
 
@@ -303,7 +286,7 @@ You can drop some breakpoints, for example:
 
 **NOTE:** if size is not set, the plugin uses a special algorithm to
 detect the width of image container and set the image size accordingly. This is the recommended way of using
-the Cloudimage Responsive plugin.
+the EdgePic Responsive plugin.
 
 For example:
 
@@ -338,7 +321,7 @@ Full documentation of all filters available [here](https://docs.cloudimage.io/go
 It is recommended to prevent page layout jumping. The parameter is used to calculate image height to hold
 the image position while image is loading.
 
-To see the full cloudimage documentation [click here](https://docs.cloudimage.io/go/cloudimage-documentation)
+To see the full documentation [click here](https://docs.cloudimage.io/go/cloudimage-documentation)
 
 ### lazyLoading
 
@@ -357,13 +340,6 @@ If you use SSR and want to use lazy loading for some images (maybe some images w
 
 Tested in all modern browsers and IE 11.
 
-## <a name="ui_family"></a>Filerobot UI Familiy
-
-* [JS Cloudimage Responsive](https://github.com/scaleflex/js-cloudimage-responsive)
-* [React Cloudimage Responsive](https://github.com/scaleflex/react-cloudimage-responsive)
-* [JS Cloudimage 360 view](https://github.com/scaleflex/js-cloudimage-360-view)
-* [Image Editor](https://github.com/scaleflex/filerobot-image-editor)
-* [Uploader](https://github.com/scaleflex/filerobot-uploader)
 
 ## <a name="contributing"></a>Contributing!
 
@@ -371,4 +347,4 @@ All contributions are super welcome!
 
 
 ## <a name="license"></a>License
-Angular Cloudimage Responsive is provided under the [MIT License](https://opensource.org/licenses/MIT)
+Angular EdgePic Responsive is provided under the [MIT License](https://opensource.org/licenses/MIT)
